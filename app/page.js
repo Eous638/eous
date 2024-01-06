@@ -62,11 +62,9 @@ export default function App() {
   };
   return (
     <div>
-      <Navbar animationColor={animationColor} />
       <Maintext />
       <NaseUsluge animationColor={animationColor} />
       <Form />
-      <Footer animationColor={animationColor} />
     </div>
   );
 }

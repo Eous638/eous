@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import Navbar from "../(components)/Navbar";
 import { IconPhone } from "@tabler/icons-react";
 import ContactForm from "../(components)/ContactForm";
 import { IconMail } from "@tabler/icons-react";
@@ -36,7 +35,6 @@ const ContactPage = () => {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
       <div ref={vantaRef} style={{ height: "120vh" }}>
-        <Navbar />
         <h1
           style={{
             display: "flex",
@@ -46,7 +44,7 @@ const ContactPage = () => {
             display: "block",
             fontSize: "3rem",
             textAlign: "center",
-            color:'white'
+            color: "white",
           }}
         >
           Kontakt
@@ -59,7 +57,7 @@ const ContactPage = () => {
             marginTop: "2.20000000000000000rem",
             fontSize: "2rem",
             gap: "1.2rem",
-            color:'white'
+            color: "white",
           }}
         >
           <IconMail size={40} />
@@ -73,7 +71,7 @@ const ContactPage = () => {
             marginTop: "2rem",
             fontSize: "2rem",
             gap: "1.2rem",
-            color:'white'
+            color: "white",
           }}
         >
           <IconPhone size={40} />
