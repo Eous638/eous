@@ -13,6 +13,7 @@ export default function NaseUsluge(props) {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        width: "100vw",
       }}
     >
       <h1
@@ -27,9 +28,11 @@ export default function NaseUsluge(props) {
       </h1>
       <div
         style={{
+          width: "80vw",
+          height: "60vh",
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "6rem",
+          gap: "2rem",
           justifyContent: "center",
           margin: "3 auto",
         }}

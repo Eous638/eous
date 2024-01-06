@@ -35,49 +35,20 @@ export default function Maintext() {
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "80vh",
+          position: "relative", // This creates a new stacking context
+          zIndex: -1, // This places this stacking context behind the navbar's
         }}
+        className="flex flex-col min-h-screen items-center justify-center"
         ref={vantaRef}
       >
         <IconCloud
           size={100}
-          style={{
-            color: "lightblue",
-            textAlign: "center",
-            margin: "0",
-            paddingBottom: 0,
-            paddingTop: "8rem",
-            margin: "auto",
-            width: "100%", // Add this line to set the width to 100%
-          }}
+          className="text-lightblue text-center m-0 pb-0 pt-8rem"
         />
-        <h1
-          style={{
-            color: "white",
-            textAlign: "center",
-            fontSize: "3rem",
-            margin: "0",
-            paddingBottom: "1rem",
-            paddingTop: "0.6rem",
-            textAlign: "center",
-          }}
-          // Add this line to center the h1 element
-        >
+        <h1 className="text-white text-center text-3xl m-0 pb-1rem pt-0.6rem">
           EOUS
         </h1>
-        <p
-          style={{
-            color: "white",
-            textAlign: "center",
-            fontSize: "2rem",
-            margin: "0",
-            paddingBottom: "6rem",
-            paddingTop: "1rem",
-            paddingInline: "35rem",
-          }}
-        >
+        <p className="text-white text-center text-sm m-0  px-3.5  inline md:text-2xl ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
           quisquam ullam blanditiis dolor recusandae.
         </p>

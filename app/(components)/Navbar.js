@@ -80,7 +80,7 @@ const Navbar = (props) => {
           style={{ marginLeft: "2rem", color: "lightblue" }}
         />
       </Link>
-      <div style={{ marginLeft: "auto", marginRight: "2rem" }}>
+      <div className="ml-auto mr-8 hidden md:block">
         <ul style={{ listStyleType: "none", display: "flex", gap: "2rem" }}>
           <li>
             <Link

@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Navbar from "./(components)/Navbar";
 import Maintext from "./(components)/Maintext";
-import Footer from "./(components)/Footer";
 import Form from "./(components)/Form";
 import NaseUsluge from "./(components)/NaseUsluge";
 import { useEffect, useState } from "react";

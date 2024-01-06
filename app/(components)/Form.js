@@ -21,11 +21,23 @@ export default function Form() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "30rem",
-        backgroundColor:'black' 
+        height: "100vh",
+        width: "100vw",
+        backgroundColor: "black",
+        boxSizing: "border-box",
       }}
     >
-      <form onSubmit={handleSubmit} style={{}}>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          width: "100%",
+          maxWidth: "100vw", // Set the maximum width to the viewport width
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          boxSizing: "border-box",
+        }}
+      >
         <div>
           <br />
           <input
@@ -33,7 +45,8 @@ export default function Form() {
             placeholder="Email"
             value={email}
             style={{
-              width: "50rem",
+              width: "100%",
+              maxWidth: "100vw", // Set the maximum width to the viewport width
               height: "3rem",
               textIndent: "3rem",
               fontSize: "1.5rem",
@@ -51,7 +64,8 @@ export default function Form() {
             value={message}
             placeholder="Poruka"
             style={{
-              width: "50rem",
+              width: "100%",
+              maxWidth: "100vw", // Set the maximum width to the viewport width
               height: "10rem",
               textIndent: "3rem",
               fontSize: "1.5rem",
