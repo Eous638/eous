@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Navbar from "../(components)/Navbar";
-import Form from "../(components)/Form";
 import { IconPhone } from "@tabler/icons-react";
+import ContactForm from "../(components)/ContactForm";
 import { IconMail } from "@tabler/icons-react";
 import WAVES from "vanta/dist/vanta.waves.min";
 const ContactPage = () => {
@@ -39,6 +39,9 @@ const ContactPage = () => {
         <Navbar />
         <h1
           style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center", // Add this line to center horizontally
             paddingTop: "11rem",
             display: "block",
             fontSize: "3rem",
@@ -73,7 +76,11 @@ const ContactPage = () => {
           <IconPhone size={40} />
           <h2>telefon</h2>
         </div>
-        <Form />
+        <div style={{ justifyContent: "center" }}>
+          {" "}
+          {/* Add this line to center horizontally */}
+          <ContactForm />
+        </div>
       </div>
     </>
   );
