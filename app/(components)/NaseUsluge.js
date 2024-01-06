@@ -21,7 +21,6 @@ export default function NaseUsluge(props) {
           color: "white",
           marginBottom: "4rem",
           fontSize: "3rem",
-          fontFamily: "karla",
         }}
       >
         Zašto EOUS?

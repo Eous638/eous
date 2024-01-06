@@ -35,7 +35,7 @@ const ContactPage = () => {
     <>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
-      <div ref={vantaRef} style={{ height: "100vh" }}>
+      <div ref={vantaRef} style={{ height: "120vh" }}>
         <Navbar />
         <h1
           style={{
@@ -43,6 +43,7 @@ const ContactPage = () => {
             display: "block",
             fontSize: "3rem",
             textAlign: "center",
+            color:'white'
           }}
         >
           Kontakt
@@ -55,6 +56,7 @@ const ContactPage = () => {
             marginTop: "2.20000000000000000rem",
             fontSize: "2rem",
             gap: "1.2rem",
+            color:'white'
           }}
         >
           <IconMail size={40} />
@@ -68,6 +70,7 @@ const ContactPage = () => {
             marginTop: "2rem",
             fontSize: "2rem",
             gap: "1.2rem",
+            color:'white'
           }}
         >
           <IconPhone size={40} />

@@ -46,7 +46,6 @@ export default function Maintext() {
           style={{
             color: "lightblue",
             textAlign: "center",
-            fontffamily: "karla",
             margin: "0",
             paddingBottom: 0,
             paddingTop: "8rem",
@@ -59,7 +58,6 @@ export default function Maintext() {
             color: "white",
             textAlign: "center",
             fontSize: "3rem",
-            fontFamily: "karla", // Fix the typo here
             margin: "0",
             paddingBottom: "1rem",
             paddingTop: "0.6rem",
@@ -74,7 +72,6 @@ export default function Maintext() {
             color: "white",
             textAlign: "center",
             fontSize: "2rem",
-            fontFamily: "karla",
             margin: "0",
             paddingBottom: "6rem",
             paddingTop: "1rem",

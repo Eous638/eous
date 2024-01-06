@@ -12,7 +12,6 @@ export default function Card(props) {
         width: "24vw", // Set width to 12.5% of viewport width
         height: "27vh", // Set height to 40% of viewport height
         border: `0.4px solid ${props.animationColor}`,
-        fontFamily: "karla", // Set font family to "karla"
       }}
     >
       {props.children}

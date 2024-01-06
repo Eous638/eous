@@ -22,6 +22,7 @@ export default function Form() {
         justifyContent: "center",
         alignItems: "center",
         height: "30rem",
+        backgroundColor:'black' 
       }}
     >
       <form onSubmit={handleSubmit} style={{}}>
