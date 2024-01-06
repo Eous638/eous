@@ -2,13 +2,13 @@
 import React from "react";
 import Navbar from "../(components)/Navbar";
 
-const Portfolio = () => {
+const Blog = () => {
   return (
     <div>
       <Navbar />
-      <p>Contact Page</p>
+      <p>Blog Page</p>
     </div>
   );
 };
 
-export default Portfolio;
+export default Blog;

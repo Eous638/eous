@@ -47,7 +47,7 @@ const Navbar = (props) => {
                 fontWeight: "bold",
               }}
             >
-              Portfolio
+              Blog
             </Link>
           </li>
           <li>
