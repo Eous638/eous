@@ -21,7 +21,9 @@ const Navbar = (props) => {
         opacity: "0.75",
       }}
     >
+      <Link href={"/"}>
       <IconCloud size={60} style={{ marginLeft: "2rem", color: "lightblue" }} />
+      </Link>
       <div style={{ marginLeft: "auto", marginRight: "2rem" }}>
         <ul style={{ listStyleType: "none", display: "flex", gap: "2rem" }}>
           <li>
@@ -39,7 +41,7 @@ const Navbar = (props) => {
           </li>
           <li>
             <Link
-              href="/portfolio"
+              href="/blog"
               style={{
                 color: "white",
                 fontSize: "2rem",
