@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.45.0",
+    "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.2"
+    "three": "^0.160.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
