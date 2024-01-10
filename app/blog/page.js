@@ -1,7 +1,19 @@
 import React from "react";
 import CardBlog from "./CardBlog";
+import PocketBase from "pocketbase";
 
-const Blog = () => {
+const pb = new PocketBase("http://127.0.0.1:8090");
+async function getData() {
+  const records = await fetch(
+    "http://127.0.0.1:8090/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
+    { next: { revalidate: 1 } }
+  );
+
+  return records.json();
+}
+const Blog = async () => {
+  const records = await getData();
+
   return (
     <div
       style={{
@@ -39,36 +51,21 @@ const Blog = () => {
           Blog
         </h1>
       </div>
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
+
+      {Object.values(records.items).map(
+        (item) => (
+          console.log(item),
+          console.log("test"),
+          (
+            <CardBlog
+              title={item.title}
+              text={item.description}
+              id={item.id}
+              img={item.image}
+            />
+          )
+        )
+      )}
     </div>
   );
 };

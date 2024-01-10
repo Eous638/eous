@@ -1,0 +1,18 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+    url       = env("ep-sweet-glitter-12751679-pooler.us-east-1.postgres.vercel-storage.com") // uses connection pooling
+    directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Post {
+    id          String  @id @default(cuid())
+    title       String
+    description String
+    content     String?
+    imageUrl    String?
+    published   Boolean @default(false)
+}
