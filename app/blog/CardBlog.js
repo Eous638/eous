@@ -69,7 +69,7 @@ export default function CardBlog(props) {
       }}
     >
       <img
-        src={`http://127.0.0.1:8090/api/files/f00bupxnz6hpf9h/${props.id}/${props.img}?token=`}
+        src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${props.id}/${props.img}?token=`}
         style={{ borderRadius: "7px" }}
       ></img>
       <div style={{ marginLeft: "3rem" }}>

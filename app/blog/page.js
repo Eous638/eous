@@ -2,10 +2,9 @@ import React from "react";
 import CardBlog from "./CardBlog";
 import PocketBase from "pocketbase";
 
-const pb = new PocketBase("http://127.0.0.1:8090");
 async function getData() {
   const records = await fetch(
-    "http://127.0.0.1:8090/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
+    "http://eous.pockethost.io/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
     { next: { revalidate: 1 } }
   );
 
@@ -52,20 +51,19 @@ const Blog = async () => {
         </h1>
       </div>
 
-      {Object.values(records.items).map(
-        (item) => (
-          console.log(item),
-          console.log("test"),
-          (
-            <CardBlog
-              title={item.title}
-              text={item.description}
-              id={item.id}
-              img={item.image}
-            />
-          )
-        )
-      )}
+      {Object.values(records.items).map((item) => {
+        console.log(
+          `http:eous.pockethost.io/api/files/f00bupxnz6hpf9h/${item.id}/${item.image}?token=`
+        );
+        return (
+          <CardBlog
+            title={item.title}
+            text={item.description}
+            id={item.id}
+            img={item.image}
+          />
+        );
+      })}
     </div>
   );
 };
