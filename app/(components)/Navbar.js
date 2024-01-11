@@ -145,6 +145,7 @@ const Navbar = (props) => {
         </div>
         <div className="ml-auto mr-8 block md:hidden">
           <button
+            className="block md:hidden"
             onClick={toggleMenu}
             style={{
               backgroundColor: "#131313",
@@ -165,7 +166,7 @@ const Navbar = (props) => {
               alignItems: "center",
               margin: 0,
             }}
-            className="absolute top-0 right-0 bg-black h-full  z-20"
+            className="absolute top-0 right-0 bg-black h-full md:hidden z-20"
           >
             <ul
               style={{
