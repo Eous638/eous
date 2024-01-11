@@ -186,7 +186,7 @@ const Navbar = (props) => {
           >
             <li>
               <Link
-                href="/proizovdi"
+                href="/proizvodi"
                 style={{
                   color: "white",
                   fontSize: "2rem",
