@@ -45,38 +45,35 @@ export default function Form() {
             className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6 "
             onChange={(e) => setName(e.target.value)}
           />
-          <br />
           <input
             type="text"
             placeholder="Broj telefona"
             value={number}
-            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6"
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
             onChange={(e) => setNumber(e.target.value)}
           />
-          <br />
           <input
             type="company"
             placeholder="Naziv kompanije (opcionalno)"
             value={email}
-            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black md:w-96 md:h-12 md:text-sm md:mb-6"
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black md:w-96 md:h-12 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
             onChange={(e) => setCompany(e.target.value)}
           />
-          <br />
+
           <input
             type="email"
             placeholder="Email"
             value={email}
-            className="w-80 h-7 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-10 md:text-sm md:mb-6"
+            className="w-80 h-7 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-10 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <br />
           <textarea
             value={message}
             placeholder="Poruka"
-            className="w-80 h-40 pl-4 pt-3 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-52 md:text-sm md:mb-6"
+            className="w-80 h-40 pl-4 pt-3 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-52 md:text-sm md:mb-6 lg:w-1/3 lg:h-55 lg:text-md lg:mb-6"
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <br />
+
           <button
             type="submit"
             style={{

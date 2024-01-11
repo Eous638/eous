@@ -35,47 +35,20 @@ const ContactPage = () => {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
       <div ref={vantaRef} style={{ height: "120vh" }}>
-        <h1
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center", // Add this line to center horizontally
-            paddingTop: "11rem",
-            display: "block",
-            fontSize: "3rem",
-            textAlign: "center",
-            color: "white",
-          }}
-        >
+        <h1 className="flex flex-col items-center justify-center pt-24 mt-8 text-3xl text-center text-white">
           Kontakt
         </h1>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "2.20000000000000000rem",
-            fontSize: "2rem",
-            gap: "1.2rem",
-            color: "white",
-          }}
-        >
-          <IconMail size={40} />
-          <h2>Email</h2>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "2rem",
-            fontSize: "2rem",
-            gap: "1.2rem",
-            color: "white",
-          }}
-        >
-          <IconPhone size={40} />
-          <h2>telefon</h2>
+        <div className="flex flex-row justify-center ">
+          <div className="flex flex=col justify-center">
+            <div className="flex flex-col justify-center text-4 gap-3 text-white">
+              <IconMail size={40} />
+              <h2>Email</h2>
+            </div>
+            <div className="flex flex-col justify-center text-4 gap-3 text-white">
+              <IconPhone size={40} />
+              <h2>Telefon</h2>
+            </div>
+          </div>
         </div>
         <div style={{ justifyContent: "center", width: "100%" }}>
           {" "}
