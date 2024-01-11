@@ -1,10 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
 // import PocketBase from "pocketbase";
 
-=======
->>>>>>> 6f2880bca5f0a3096caf9abc463cbbf79b6b84b0
 export default function CardBlog(props) {
   const [animationColor, setAnimationColor] = useState("#5005FF");
   const color1 = "#5005FF";
