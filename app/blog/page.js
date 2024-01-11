@@ -1,7 +1,18 @@
 import React from "react";
 import CardBlog from "./CardBlog";
+import PocketBase from "pocketbase";
 
-const Blog = () => {
+async function getData() {
+  const records = await fetch(
+    "http://eous.pockethost.io/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
+    { next: { revalidate: 1 } }
+  );
+
+  return records.json();
+}
+const Blog = async () => {
+  const records = await getData();
+
   return (
     <div
       style={{
@@ -39,36 +50,20 @@ const Blog = () => {
           Blog
         </h1>
       </div>
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
-      <CardBlog
-        img="modern.jpg"
-        title="BLOG"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-      quisquam ullam blanditiis dolor recusandae."
-      />
+
+      {Object.values(records.items).map((item) => {
+        console.log(
+          `http:eous.pockethost.io/api/files/f00bupxnz6hpf9h/${item.id}/${item.image}?token=`
+        );
+        return (
+          <CardBlog
+            title={item.title}
+            text={item.description}
+            id={item.id}
+            img={item.image}
+          />
+        );
+      })}
     </div>
   );
 };

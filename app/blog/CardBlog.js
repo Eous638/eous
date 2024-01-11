@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import PocketBase from "pocketbase";
 
 export default function CardBlog(props) {
   const [animationColor, setAnimationColor] = useState("#5005FF");
@@ -67,7 +68,10 @@ export default function CardBlog(props) {
         backgroundColor: "#242323",
       }}
     >
-      <img src={props.img} style={{ borderRadius: "7px" }}></img>
+      <img
+        src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${props.id}/${props.img}?token=`}
+        style={{ borderRadius: "7px" }}
+      ></img>
       <div style={{ marginLeft: "3rem" }}>
         <h1 style={{ fontSize: "3rem", color: "white" }}>{props.title}</h1>
         <p style={{ fontSize: "1.6rem", color: "white" }}>{props.text}</p>
