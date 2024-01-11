@@ -45,21 +45,12 @@ const Proizvodi = () => {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
-            backgroundColor: "#5005FF",
             borderRadius: 30,
             width: "70vw",
             margin: "auto",
           }}
         >
-          <h1
-            style={{
-              fontSize: "4rem",
-              fontWeight: "700",
-              textAlign: "center",
-              paddingTop: "7rem",
-              paddingBottom: "7rem",
-            }}
-          >
+          <h1 className="text-3xl font-bold text-center pt-28 pb-28 text-white md:text-4xl">
             Proizvodi
           </h1>
         </div>
