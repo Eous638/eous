@@ -63,15 +63,7 @@ const Proizvodi = () => {
             Proizvodi
           </h1>
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "3rem",
-            justifyContent: "center",
-            margin: "2rem 7rem",
-          }}
-        >
+        <div className=" grid  gap-12 justify-center mx-7 my-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <CardProizvod tittle="NASLOV" img="download (1).jpeg" />
           <CardProizvod tittle="NASLOV" img="download (1).jpeg" />
           <CardProizvod tittle="NASLOV" img="download (1).jpeg" />

@@ -24,66 +24,41 @@ export default function Form() {
         justifyContent: "center",
         width: "100%",
         alignItems: "center",
-        height: "30rem",
+        height: "3.70rem",
       }}
     >
-      <form onSubmit={handleSubmit} style={{}}>
-        <div>
+      <form onSubmit={handleSubmit}>
+        <div
+          style={{
+            width: "100vw",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <br />
           <input
             type="Name"
-            placeholder="Full name"
+            placeholder="Ime i prezime"
             value={name}
-            style={{
-              width: "50rem",
-              height: "3rem",
-              textIndent: "3rem",
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
-              alignContent: "center",
-              border: "1.7px solid white",
-              borderRadius: "7px",
-              backgroundColor: "#1d1f1e",
-              required: true,
-            }}
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6 "
             onChange={(e) => setName(e.target.value)}
           />
           <br />
           <input
-            type="Number"
-            placeholder="Number"
+            type="text"
+            placeholder="Broj telefona"
             value={number}
-            style={{
-              width: "50rem",
-              height: "3rem",
-              textIndent: "3rem",
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
-              alignContent: "center",
-              border: "1.7px solid white",
-              borderRadius: "7px",
-              backgroundColor: "#1d1f1e",
-              required: true,
-            }}
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6"
             onChange={(e) => setNumber(e.target.value)}
           />
           <br />
           <input
             type="company"
-            placeholder="Company(optional)"
+            placeholder="Naziv kompanije (opcionalno)"
             value={email}
-            style={{
-              width: "50rem",
-              height: "3rem",
-              textIndent: "3rem",
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
-              alignContent: "center",
-              border: "1.7px solid white",
-              borderRadius: "7px",
-              backgroundColor: "#1d1f1e",
-              required: true,
-            }}
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black md:w-96 md:h-12 md:text-sm md:mb-6"
             onChange={(e) => setCompany(e.target.value)}
           />
           <br />
@@ -91,34 +66,14 @@ export default function Form() {
             type="email"
             placeholder="Email"
             value={email}
-            style={{
-              width: "50rem",
-              height: "3rem",
-              textIndent: "3rem",
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
-              alignContent: "center",
-              border: "1.7px solid white",
-              borderRadius: "7px",
-              backgroundColor: "#1d1f1e",
-              required: true,
-            }}
+            className="w-80 h-7 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-10 md:text-sm md:mb-6"
             onChange={(e) => setEmail(e.target.value)}
           />
           <br />
           <textarea
             value={message}
             placeholder="Poruka"
-            style={{
-              width: "50rem",
-              height: "10rem",
-              textIndent: "3rem",
-              fontSize: "1.5rem",
-              alignContent: "center",
-              border: "1.7px solid white",
-              borderRadius: "7px",
-              backgroundColor: "#1d1f1e",
-            }}
+            className="w-80 h-40 pl-4 pt-3 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-52 md:text-sm md:mb-6"
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <br />
@@ -126,16 +81,17 @@ export default function Form() {
             type="submit"
             style={{
               backgroundColor: "#1d1f1e",
-              padding: "0.5rem",
+              padding: "0.3rem",
               borderRadius: "7px",
-              fontSize: "1.5rem",
+              fontSize: "1.1rem",
               border: "1.3px solid white",
               placeholder: "Pošalji",
               color: "grey",
               cursor: "pointer",
               marginLeft: "auto",
               marginRight: "auto",
-              marginTop: "1rem",
+              marginTop: "0",
+              marginBottom: "2rem",
               display: "flex",
             }}
           >

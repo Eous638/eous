@@ -76,7 +76,7 @@ const ContactPage = () => {
           <IconPhone size={40} />
           <h2>telefon</h2>
         </div>
-        <div style={{ justifyContent: "center" }}>
+        <div style={{ justifyContent: "center", width: "100%" }}>
           {" "}
           {/* Add this line to center horizontally */}
           <ContactForm />
