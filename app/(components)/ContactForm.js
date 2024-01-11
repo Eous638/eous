@@ -46,7 +46,7 @@ export default function Form() {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            type="text"
+            type="phone"
             placeholder="Broj telefona"
             value={number}
             className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-12 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
@@ -64,7 +64,7 @@ export default function Form() {
             type="email"
             placeholder="Email"
             value={email}
-            className="w-80 h-7 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-10 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
+            className="w-80 h-10 pl-4 text-xs mb-4 items-center justify-center border-white border-2 rounded-md bg-black required md:w-96 md:h-10 md:text-sm md:mb-6 lg:w-1/3 lg:h-20 lg:text-md lg:mb-6"
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
