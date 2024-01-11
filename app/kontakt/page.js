@@ -35,21 +35,7 @@ const ContactPage = () => {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
       <div ref={vantaRef} style={{ height: "120vh" }}>
-<<<<<<< HEAD
         <h1 className="flex flex-col items-center justify-center pt-24 mt-8 text-3xl text-center text-white">
-=======
-        <h1
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center", // Add this line to center horizontally
-            display: "block",
-            fontSize: "3rem",
-            textAlign: "center",
-            color: "white",
-          }}
-        >
->>>>>>> 850cf230a42c59726911474ab1c08f959e98c3e0
           Kontakt
         </h1>
         <div className="flex flex-row justify-center ">
