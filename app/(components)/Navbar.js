@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { IconCloud } from "@tabler/icons-react";
+import { IconCloud, IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
-
+import { useClickAway } from "@uidotdev/usehooks";
 const Navbar = (props) => {
   const [animationColor, setAnimationColor] = useState("#5005FF");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,9 @@ const Navbar = (props) => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const ref = useClickAway(() => {
+    setIsMenuOpen(false);
+  });
   useEffect(() => {
     document.addEventListener("click", handleClickOutsideMenu);
     return () => {
@@ -156,7 +158,7 @@ const Navbar = (props) => {
               outline: "none",
             }}
           >
-            Menu
+            <IconMenu2 size={40} />
           </button>
         </div>
         {isMenuOpen && (
@@ -166,6 +168,7 @@ const Navbar = (props) => {
               alignItems: "center",
               margin: 0,
             }}
+            ref={ref}
             className="absolute top-0 right-0 bg-black h-full md:hidden z-20"
           >
             <ul
