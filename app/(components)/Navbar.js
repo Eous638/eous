@@ -192,7 +192,10 @@ const Navbar = (props) => {
             >
               <li>
                 <Link
-                  href="/proizovdi"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
+                  href="/proizvodi"
                   style={{
                     color: "white",
                     fontSize: "2rem",
@@ -206,6 +209,9 @@ const Navbar = (props) => {
               <li>
                 <Link
                   href="/blog"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
                   style={{
                     color: "white",
                     fontSize: "2rem",
@@ -218,6 +224,9 @@ const Navbar = (props) => {
               </li>
               <li>
                 <Link
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}
                   href="/kontakt"
                   style={{
                     color: "white",
