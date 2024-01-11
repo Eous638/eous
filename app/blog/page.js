@@ -1,6 +1,6 @@
 import React from "react";
 import CardBlog from "./CardBlog";
-import PocketBase from "pocketbase";
+import Link from "next/link";
 
 async function getData() {
   const records = await fetch(
@@ -56,12 +56,14 @@ const Blog = async () => {
           `http:eous.pockethost.io/api/files/f00bupxnz6hpf9h/${item.id}/${item.image}?token=`
         );
         return (
-          <CardBlog
-            title={item.title}
-            text={item.description}
-            id={item.id}
-            img={item.image}
-          />
+          <Link href={`/blog/${item.id}`}>
+            <CardBlog
+              title={item.title}
+              text={item.description}
+              id={item.id}
+              img={item.image}
+            />
+          </Link>
         );
       })}
     </div>
