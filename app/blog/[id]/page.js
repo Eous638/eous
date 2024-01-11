@@ -9,7 +9,10 @@ const PostPage = async ({ params }) => {
   }
   const data = await getData();
   console.log(data);
-  const description = { __html: `${data.content}` };
+  const description = { __html: `${replaceWithbr(data.content)}` };
+  function replaceWithbr(str) {
+    return str.replace(/\n/g, "<br />");
+  }
 
   return (
     <div style={{ margin: "7rem" }}>
@@ -18,9 +21,13 @@ const PostPage = async ({ params }) => {
       >
         <img
           src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${params.id}/${data.image}?token=`}
-          style={{ borderRadius: "7px", height: "30%" }}
+          style={{ borderRadius: "7px", height: "50vh" }}
         />
-        <div>
+        <div
+          style={{
+            margin: "0 auto",
+          }}
+        >
           <h1 style={{ fontSize: 50, textAlign: "center", margin: "0 auto" }}>
             {data.title}
           </h1>
@@ -33,7 +40,14 @@ const PostPage = async ({ params }) => {
         </div>
       </div>
       <div
-        style={{ fontSize: 30, padding: 5, marginTop: 20 }}
+        style={{
+          fontSize: 30,
+          padding: 25,
+          marginTop: 25,
+          borderTop: 1,
+          borderColor: "red",
+          borderStyle: "solid",
+        }}
         dangerouslySetInnerHTML={description}
       />
       ;
