@@ -17,38 +17,25 @@ const Blog = async () => {
     <div
       style={{
         backgroundColor: "#242323",
-
         alignContent: "center",
         justifyContent: "center",
         alignItems: "center",
-        paddingTop: "7rem",
+        paddingTop: 30,
       }}
     >
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient(235deg, hsl(273deg 96% 60%) 13%, hsl(276deg 69% 47%) 50%, hsl(285deg 92% 29%) 87%)",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          backgroundColor: "#5005FF",
-          borderRadius: 30,
-          width: "70vw",
-          margin: "auto",
-        }}
-      >
-        <h1
+      <div className="px-5">
+        <div
           style={{
-            fontSize: "4rem",
-            fontWeight: "700",
-            textAlign: "center",
-            paddingTop: "7rem",
-            paddingBottom: "7rem",
+            backgroundImage:
+              "linear-gradient(235deg, hsl(273deg 96% 60%) 13%, hsl(276deg 69% 47%) 50%, hsl(285deg 92% 29%) 87%)",
+            margin: "0 auto", // Add this line to center the div horizontally
           }}
+          className="flex justify-center items-center flex-col bg-purple-500 rounded-3xl mx-10 md:h-56 lg:w-1/2 lg:h-72"
         >
-          Blog
-        </h1>
+          <h1 className="text-2xl md:text-6xl font-bold text-center pt-8 pb-8">
+            Blog
+          </h1>
+        </div>
       </div>
 
       {Object.values(records.items).map((item) => {
