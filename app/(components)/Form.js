@@ -46,7 +46,7 @@ export default function Form() {
             value={email}
             style={{
               width: "100%",
-              maxWidth: "100vw", // Set the maximum width to the viewport width
+              maxWidth: "100vw",
               height: "3rem",
               textIndent: "3rem",
               fontSize: "1.5rem",
@@ -64,8 +64,8 @@ export default function Form() {
             value={message}
             placeholder="Poruka"
             style={{
-              width: "100%",
-              maxWidth: "100vw", // Set the maximum width to the viewport width
+              width: "50vw",
+              // maxWidth: "100vw", // Set the maximum width to the viewport width
               height: "10rem",
               textIndent: "3rem",
               fontSize: "1.5rem",
