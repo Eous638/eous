@@ -5,8 +5,26 @@ import Link from "next/link";
 
 const Navbar = (props) => {
   const [animationColor, setAnimationColor] = useState("#5005FF");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleClickOutsideMenu = (event) => {
+    const menu = document.getElementById("menu");
+    if (menu && menu.contains(event.target)) {
+      toggleMenu();
+    }
+  };
   const color1 = "#5005FF";
   const color2 = "#FF0000";
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutsideMenu);
+    return () => {
+      document.removeEventListener("click", handleClickOutsideMenu);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +89,8 @@ const Navbar = (props) => {
         width: "100%",
         height: "6rem",
         zIndex: "100",
-        opacity: "0.75",
+        opacity: "0.8",
+        maxWidth: "100vw",
       }}
     >
       <Link href={"/"}>
@@ -80,7 +99,7 @@ const Navbar = (props) => {
           style={{ marginLeft: "2rem", color: "lightblue" }}
         />
       </Link>
-      <div className="ml-auto mr-8 hidden md:block">
+      <div className="ml-auto mr-8 hidden md:block" id="menu">
         <ul style={{ listStyleType: "none", display: "flex", gap: "2rem" }}>
           <li>
             <Link
@@ -123,6 +142,91 @@ const Navbar = (props) => {
           </li>
         </ul>
       </div>
+      <div className="ml-auto mr-8 block md:hidden">
+        <button
+          onClick={toggleMenu}
+          style={{
+            backgroundColor: "#131313",
+            color: "white",
+            fontSize: "2rem",
+            border: "none",
+            cursor: "pointer",
+            outline: "none",
+          }}
+        >
+          Menu
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div
+          style={{ justifyContent: "center", alignItems: "center", margin: 0 }}
+          className="absolute top-0 right-0 bg-black h-full  z-20"
+        >
+          <ul
+            style={{
+              listStyleType: "none",
+              display: "flex",
+              flexDirection: "column",
+              backgroundColor: "#131313",
+              zIndex: "200",
+              color: "white",
+              fontSize: "2rem",
+              border: "none",
+              cursor: "pointer",
+              outline: "none",
+              textAlign: "center",
+              height: "100vh",
+              width: "100vw",
+              margin: "0",
+              padding: "6rem",
+              paddingInline: "3rem",
+              width: "80vw",
+              lineHeight: "6rem",
+            }}
+          >
+            <li>
+              <Link
+                href="/proizovdi"
+                style={{
+                  color: "white",
+                  fontSize: "2rem",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                Proizvodi
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                style={{
+                  color: "white",
+                  fontSize: "2rem",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                }}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/kontakt"
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "2rem",
+                  textDecoration: "none",
+                }}
+              >
+                Kontakt
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+      ;
     </nav>
   );
 };

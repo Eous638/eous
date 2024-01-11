@@ -1,6 +1,11 @@
 import React from "react";
 import Card from "./Card";
-import { IconCloud, IconMilkshake } from "@tabler/icons-react";
+import {
+  IconDevices,
+  IconBolt,
+  IconCubeSend,
+  IconBinaryTree,
+} from "@tabler/icons-react";
 
 export default function NaseUsluge(props) {
   return (
@@ -37,17 +42,25 @@ export default function NaseUsluge(props) {
           margin: "3 auto",
         }}
       >
-        <Card title="Naslov" text="Tekst" animationColor={props.animationColor}>
-          <IconMilkshake size={100} style={{ color: "white" }} />
+        <Card title="BRZO" text="Tekst" animationColor={props.animationColor}>
+          <IconBolt size={95} strokeWidth={2} color={"#5005FF"} />
         </Card>
-        <Card title="Naslov" text="Tekst" animationColor={props.animationColor}>
-          <IconCloud size={100} style={{ color: "white" }} />
+        <Card
+          title="CROSS-PLATFORM"
+          text="Tekst"
+          animationColor={props.animationColor}
+        >
+          <IconDevices size={95} strokeWidth={2} color={"#5005FF"} />
         </Card>
-        <Card title="Naslov" text="Tekst" animationColor={props.animationColor}>
-          <IconCloud size={100} style={{ color: "white" }} />
+        <Card title="EDGE" text="Tekst" animationColor={props.animationColor}>
+          <IconCubeSend size={95} strokeWidth={2} color={"#5005FF"} />
         </Card>
-        <Card title="Naslov" text="Tekst" animationColor={props.animationColor}>
-          <IconCloud size={100} style={{ color: "white" }} />
+        <Card
+          title="DECENTRALIZOVANO"
+          text="Tekst"
+          animationColor={props.animationColor}
+        >
+          <IconBinaryTree size={95} strokeWidth={2} color={"#5005FF"} />
         </Card>
       </div>
     </div>
