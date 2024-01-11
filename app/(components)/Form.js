@@ -21,7 +21,7 @@ export default function Form() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
+        height: "70vh",
         width: "100vw",
         backgroundColor: "black",
         boxSizing: "border-box",
@@ -64,8 +64,7 @@ export default function Form() {
             value={message}
             placeholder="Poruka"
             style={{
-              width: "50vw",
-              // maxWidth: "100vw", // Set the maximum width to the viewport width
+              width: "80vw",
               height: "10rem",
               textIndent: "3rem",
               fontSize: "1.5rem",
