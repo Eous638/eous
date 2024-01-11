@@ -46,7 +46,7 @@ export default function Maintext() {
           EOUS
         </h1>
         <p className="text-white text-center text-2xl m-0  px-3.5  inline md:text-4xl pt-6">
-          Where Ideas Become Reality
+          Experience the future of technology, today.
         </p>
       </div>
     </>
