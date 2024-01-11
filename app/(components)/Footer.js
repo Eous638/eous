@@ -55,26 +55,28 @@ export default function Footer(props) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   };
   return (
-    <footer
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        backgroundColor: "black",
-        color: "white",
-        height: "30 rem",
-        alignItems: "center",
-        fontSize: "1.5 rem",
-        justifyContent: "space-around",
-        textAlign: "center",
-        margin: "0",
-        borderTop: `0.1rem solid ${animationColor}`,
-        height: "6rem",
-      }}
-    >
-      <p>EOUS</p>
-      <p>Email</p>
-      <p>Phone</p>
-      <p>© 2024 EOUS</p>
-    </footer>
+    <div className="block, h-24">
+      <footer
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          backgroundColor: "black",
+          color: "white",
+          height: "30 rem",
+          alignItems: "center",
+          fontSize: "1.5 rem",
+          justifyContent: "space-around",
+          textAlign: "center",
+          margin: "0",
+          borderTop: `0.1rem solid ${animationColor}`,
+          height: "6rem",
+        }}
+      >
+        <p>EOUS</p>
+        <p>Email</p>
+        <p>Phone</p>
+        <p>© 2024 EOUS</p>
+      </footer>
+    </div>
   );
 }

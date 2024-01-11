@@ -40,7 +40,6 @@ const ContactPage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center", // Add this line to center horizontally
-            paddingTop: "11rem",
             display: "block",
             fontSize: "3rem",
             textAlign: "center",
