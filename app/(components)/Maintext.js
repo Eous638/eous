@@ -41,10 +41,7 @@ export default function Maintext() {
         className="flex flex-col min-h-screen items-center justify-center"
         ref={vantaRef}
       >
-        <IconCloud
-          size={100}
-          className="text-lightblue text-center m-0 pb-0 pt-8rem"
-        />
+        <img src="logo 1.png" className="h-72"></img>
         <h1 className="text-white text-center text-3xl m-0 pb-1rem pt-0.6rem">
           EOUS
         </h1>

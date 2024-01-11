@@ -97,9 +97,9 @@ const Navbar = (props) => {
         }}
       >
         <Link href={"/"}>
-          <IconCloud
-            size={60}
-            style={{ marginLeft: "2rem", color: "lightblue" }}
+          <img
+            src="logo 1.png"
+            style={{ marginLeft: "2rem", color: "white", height: "4rem" }}
           />
         </Link>
         <div className="ml-auto mr-8 hidden md:block" id="menu">
