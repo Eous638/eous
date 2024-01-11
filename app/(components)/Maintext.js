@@ -41,13 +41,12 @@ export default function Maintext() {
         className="flex flex-col min-h-screen items-center justify-center"
         ref={vantaRef}
       >
-        <img src="logo 1.png" className="h-72"></img>
-        <h1 className="text-white text-center text-3xl m-0 pb-1rem pt-0.6rem">
+        <img src="logo 1.png" className=" h-56 md:h-72"></img>
+        <h1 className="text-white text-center text-6xl md:text-9xl m-0 pb-1rem pt-1rem">
           EOUS
         </h1>
-        <p className="text-white text-center text-sm m-0  px-3.5  inline md:text-2xl ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum
-          quisquam ullam blanditiis dolor recusandae.
+        <p className="text-white text-center text-2xl m-0  px-3.5  inline md:text-4xl pt-6">
+          Where Ideas Become Reality
         </p>
       </div>
     </>
