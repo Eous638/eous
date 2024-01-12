@@ -2,7 +2,7 @@ export default function Card(props) {
   return (
     <div
       className={
-        "text-center p-9 shadow-md rounded-lg bg-black w-full md:w-4/5 border-1 flex flex-col items-center"
+        "text-center w-full p-9 h-full shadow-md rounded-lg bg-black md:w-4/5 border-1 flex flex-col items-center"
       }
       style={{
         border: `1px solid ${props.animationColor}`,

@@ -4,11 +4,37 @@ import Maintext from "./(components)/Maintext";
 import Form from "./(components)/Form";
 import NaseUsluge from "./(components)/NaseUsluge";
 import { useEffect, useState } from "react";
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 export default function App() {
   const [animationColor, setAnimationColor] = useState("#5005FF");
   const color1 = "#5005FF";
   const color2 = "#FF0000";
+  const { width } = useWindowDimensions();
+  const iconSize = width > 600 ? 95 : 50;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +87,7 @@ export default function App() {
   return (
     <div>
       <Maintext />
-      <NaseUsluge animationColor={animationColor} />
+      <NaseUsluge animationColor={animationColor} iconSize={iconSize} />
       <Form />
     </div>
   );
