@@ -42,16 +42,8 @@ const Proizvodi = () => {
             style={{
               backgroundImage:
                 "linear-gradient( 35deg,hsl(334deg 94% 45%) 0%, hsl(18deg 84% 61%) 82%, hsl(40deg 100% 50%) 100%",
-
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-              borderRadius: 30,
-              width: "50vw",
-              margin: "0 auto",
-              padding: 0,
             }}
+            className="flex justify-center items-center flex-col rounded-lg w-46.6vw h-28.5vh mx-auto p-0"
           >
             <h1 className="text-3xl font-bold text-center pt-28 pb-28 text-white md:text-4xl">
               Proizvodi
