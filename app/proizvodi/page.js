@@ -35,13 +35,28 @@ const Proizvodi = () => {
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
       <div
         ref={vantaRef}
-        style={{ height: "100%", paddingBottom: 30, paddingTop: "5rem" }}
+        style={{
+          height: "100%",
+          paddingBottom: 30,
+          paddingTop: "5rem",
+          position: "relative",
+          top: "-6rem",
+        }}
       >
         <div className="px-12">
           <div
             style={{
               backgroundImage:
                 "linear-gradient( 35deg,hsl(334deg 94% 45%) 0%, hsl(18deg 84% 61%) 82%, hsl(40deg 100% 50%) 100%",
+
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+              borderRadius: 30,
+              width: "50vw",
+              margin: "6rem auto",
+              padding: 0,
             }}
             className="flex justify-center items-center flex-col rounded-lg w-46.6vw h-28.5vh mx-auto p-0"
           >

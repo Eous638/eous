@@ -38,6 +38,7 @@ export default function Form() {
           boxSizing: "border-box",
         }}
       >
+        <h1 className="text-4xl">Pusti nam poruku</h1>
         <div>
           <br />
           <input
