@@ -22,7 +22,7 @@ export default function Form() {
         justifyContent: "center",
         alignItems: "center",
         height: "70vh",
-        width: "100vw",
+        width: "100%",
         backgroundColor: "black",
         boxSizing: "border-box",
       }}

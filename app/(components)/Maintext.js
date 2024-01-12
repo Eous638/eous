@@ -35,8 +35,12 @@ export default function Maintext() {
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
       <div
         style={{
-          position: "relative", // This creates a new stacking context
-          zIndex: -1, // This places this stacking context behind the navbar's
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+          zIndex: -1,
         }}
         className="flex flex-col min-h-screen items-center justify-center"
         ref={vantaRef}
@@ -45,7 +49,7 @@ export default function Maintext() {
         <h1 className="text-white text-center text-6xl md:text-9xl m-0 pb-1rem pt-1rem">
           EOUS
         </h1>
-        <p className="text-white text-center text-2xl m-0  px-3.5  inline md:text-4xl pt-6">
+        <p className="text-white text-center text-2xl m-0  px-3.5   inline md:text-4xl pt-6">
           Experience the future of technology, today.
         </p>
       </div>
