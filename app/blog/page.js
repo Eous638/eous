@@ -23,16 +23,16 @@ const Blog = async () => {
         paddingTop: 30,
       }}
     >
-      <div className="p-12 px-14 md:w-30 flex justify-center md:mx-auto">
+      <div className="p-12 px-14 w-9/ flex justify-center md:mx-auto">
         <div
           style={{
             backgroundImage:
               "linear-gradient(235deg, hsl(273deg 96% 60%) 13%, hsl(276deg 69% 47%) 50%, hsl(285deg 92% 29%) 87%)",
             margin: "0 auto", // Add this line to center the div horizontally
           }}
-          className="flex justify-center items-center flex-col bg-purple-500 rounded-3xl mx-auto md:h-56 lg:w-1/2 lg:h-72"
+          className="flex justify-center items-center flex-col w-full bg-purple-500 rounded-3xl mx-auto md:h-56 lg:w-1/2 lg:h-72"
         >
-          <h1 className="text-3xl font-bold text-center pt-28 pb-28 text-white md:text-4xl">
+          <h1 className="text-3xl font-bold text-center p-20 lg:pt-28 lg:pb-28 text-white md:text-4xl">
             Blog
           </h1>
         </div>
