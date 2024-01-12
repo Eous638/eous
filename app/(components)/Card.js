@@ -10,7 +10,7 @@ export default function Card(props) {
     >
       {props.children}
       <h1
-        className="text-white m-4 text-lg break-words"
+        className="text-white m-4 text-lg break-words md:text-2xl"
         style={{ wordWrap: "break-word" }}
       >
         {props.title}
