@@ -57,24 +57,23 @@ export default function CardBlog(props) {
   };
   return (
     <div
+      className="pt-6 pb-6 flex flex-row px-6 h-22 rounded-2xl mb-6 cursor-pointer md:px-24 md:pt-6 md:pb-10"
       style={{
-        paddingTop: "4rem",
-        paddingBottom: "4rem",
-        display: "flex",
-        flexDirection: "row",
-        paddingInline: "5rem",
-        height: "26rem",
         borderBottom: `1.5px solid ${animationColor}`,
         backgroundColor: "#242323",
       }}
     >
       <img
         src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${props.id}/${props.img}?token=`}
-        style={{ borderRadius: "7px" }}
+        className="rounded-2xl h-24 md:h-52"
       ></img>
-      <div style={{ marginLeft: "3rem" }}>
-        <h1 style={{ fontSize: "3rem", color: "white" }}>{props.title}</h1>
-        <p style={{ fontSize: "1.6rem", color: "white" }}>{props.text}</p>
+      <div className="ml-6">
+        <h1 className="text-white text-sm md:text-4xl pb-3 mt-8">
+          {props.title}
+        </h1>
+        <p className="text-white text-xs hidden md:block md:text-xl">
+          {props.text}
+        </p>
       </div>
     </div>
   );
