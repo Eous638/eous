@@ -42,7 +42,7 @@ export default function Maintext() {
           position: "relative",
           zIndex: -1,
         }}
-        className="flex flex-col min-h-screen items-center justify-center"
+        className="flex flex-col h-screen items-center justify-center"
         ref={vantaRef}
       >
         <img src="logo 1.png" className=" h-56 md:h-72"></img>
