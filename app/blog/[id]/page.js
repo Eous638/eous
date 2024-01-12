@@ -15,42 +15,33 @@ const PostPage = async ({ params }) => {
   }
 
   return (
-    <div style={{ margin: "7rem" }}>
-      <div
-        style={{ flexDirection: "row", display: "flex", alignItems: "center" }}
-      >
+    <div className="m-6  lg:m-28">
+      <div className="flex-col lg:flex-row flex items-center">
         <img
           src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${params.id}/${data.image}?token=`}
-          style={{ borderRadius: "7px", height: "50vh" }}
+          className="rounded-lg mb-6 lg:mb-0"
+          style={{ height: "50vh" }}
         />
         <div
           style={{
-            margin: "0 auto",
+            margin: "0",
           }}
         >
-          <h1 style={{ fontSize: 50, textAlign: "center", margin: "0 auto" }}>
+          <h1 className=" text:3xl md:text-5xl text-center md:mx-auto">
             {data.title}
           </h1>
-          <p style={{ fontSize: 20, textAlign: "center", margin: "3 3" }}>
+          <p className="text-md  md:text-lg md:text-center m-6 md:m-3 text-justify">
             {data.description}
           </p>
-          <p style={{ fontSize: 20, textAlign: "center", margin: "3 3" }}>
+          <p className="text-md md:text-lg md:text-center m-6 md:my-3 text-justify">
             Created: {data.created.slice(0, 10)}
           </p>
         </div>
       </div>
       <div
-        style={{
-          fontSize: 30,
-          padding: 25,
-          marginTop: 25,
-          borderTop: 1,
-          borderColor: "red",
-          borderStyle: "solid",
-        }}
+        className="md:text-3xl md:p-6 md:mt-6 md:border-t-2 border-red-500"
         dangerouslySetInnerHTML={description}
       />
-      ;
     </div>
   );
 };
