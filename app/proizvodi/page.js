@@ -35,7 +35,13 @@ const Proizvodi = () => {
       <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
       <div
         ref={vantaRef}
-        style={{ height: "100%", paddingBottom: 30, paddingTop: "5rem" }}
+        style={{
+          height: "100%",
+          paddingBottom: 30,
+          paddingTop: "5rem",
+          position: "relative",
+          top: "-6rem",
+        }}
       >
         <div className="px-12">
           <div
@@ -49,7 +55,7 @@ const Proizvodi = () => {
               flexDirection: "column",
               borderRadius: 30,
               width: "50vw",
-              margin: "0 auto",
+              margin: "6rem auto",
               padding: 0,
             }}
           >

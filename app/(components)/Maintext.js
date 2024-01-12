@@ -41,6 +41,7 @@ export default function Maintext() {
           justifyContent: "center",
           position: "relative",
           zIndex: -1,
+          top: "-6rem",
         }}
         className="flex flex-col min-h-screen items-center justify-center"
         ref={vantaRef}
