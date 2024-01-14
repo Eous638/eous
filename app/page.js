@@ -1,7 +1,10 @@
 import React from "react";
 import Maintext from "./(components)/Maintext";
 import Form from "./(components)/Form";
-import NaseUsluge from "./(components)/NaseUsluge";
+import dynamic from "next/dynamic";
+const NaseUsluge = dynamic(() => import("./(components)/NaseUsluge"), {
+  ssr: false,
+});
 
 export default function App() {
   return (
