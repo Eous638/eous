@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, useRef } from "react";
 import { IconCloud } from "@tabler/icons-react";
 import NET from "vanta/dist/vanta.net.min";
