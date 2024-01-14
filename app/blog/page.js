@@ -3,16 +3,12 @@ import CardBlog from "./CardBlog";
 import Link from "next/link";
 
 async function getData() {
-  const response = await fetch(
+  const records = await fetch(
     "http://eous.pockethost.io/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
     { next: { revalidate: 1 } }
   );
 
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
-  return response.json();
+  return records.json();
 }
 const Blog = async () => {
   const records = await getData();
@@ -47,10 +43,7 @@ const Blog = async () => {
           `http:eous.pockethost.io/api/files/f00bupxnz6hpf9h/${item.id}/${item.image}?token=`
         );
         return (
-          <Link
-            href={`/blog/${item.id}`}
-            aria-label={`blog post ${items.name}`}
-          >
+          <Link href={`/blog/${item.id}`} aria-label="blog post ">
             <CardBlog
               title={item.title}
               text={item.description}
