@@ -98,7 +98,7 @@ function NaseUsluge(props) {
   };
   return (
     <div className="bg-black border-t-1 border-black flex flex-col justify-center items-center  w-full overflow-hidden ">
-      <h1 className="mb-24 text-6xl" style={{ color: props.animationColor }}>
+      <h1 className="mb-24 text-6xl" style={{ color: animationColor }}>
         Zašto EOUS?
       </h1>
       <div className="gap-4 p-4 md:w-4/5 h-3/5 grid grid-cols-2 md:gap-8 justify-center mx-auto w-full">
@@ -111,35 +111,23 @@ function NaseUsluge(props) {
           <Card
             title="CROSS-PLATFORM"
             text="Tekst"
-            animationColor={props.animationColor}
+            animationColor={animationColor}
           >
-            <IconDevices
-              size={props.iconSize}
-              strokeWidth={2}
-              color={"#5005FF"}
-            />
+            <IconDevices size={iconSize} strokeWidth={2} color={"#5005FF"} />
           </Card>
         </div>
         <div className="flex justify-center">
-          <Card title="EDGE" text="Tekst" animationColor={props.animationColor}>
-            <IconCubeSend
-              size={props.iconSize}
-              strokeWidth={2}
-              color={"#5005FF"}
-            />
+          <Card title="EDGE" text="Tekst" animationColor={animationColor}>
+            <IconCubeSend size={iconSize} strokeWidth={2} color={"#5005FF"} />
           </Card>
         </div>
         <div className="flex justify-center">
           <Card
             title="DE-CENTRALIZOVANO"
             text="Tekst"
-            animationColor={props.animationColor}
+            animationColor={animationColor}
           >
-            <IconBinaryTree
-              size={props.iconSize}
-              strokeWidth={2}
-              color={"#5005FF"}
-            />
+            <IconBinaryTree size={iconSize} strokeWidth={2} color={"#5005FF"} />
           </Card>
         </div>
       </div>
