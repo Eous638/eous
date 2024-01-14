@@ -3,12 +3,16 @@ import CardBlog from "./CardBlog";
 import Link from "next/link";
 
 async function getData() {
-  const records = await fetch(
+  const response = await fetch(
     "http://eous.pockethost.io/api/collections/blog_posts/records?page=1&limit=10&sort=-created",
     { next: { revalidate: 1 } }
   );
 
-  return records.json();
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  return response.json();
 }
 const Blog = async () => {
   const records = await getData();
