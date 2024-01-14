@@ -21,6 +21,7 @@ const PostPage = async ({ params }) => {
           src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${params.id}/${data.image}?token=`}
           className="rounded-lg mb-6 lg:mb-0"
           style={{ height: "50vh" }}
+          alt="blog"
         />
         <div
           style={{

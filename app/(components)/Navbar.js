@@ -96,10 +96,11 @@ const Navbar = (props) => {
           maxWidth: "100vw",
         }}
       >
-        <Link href={"/"}>
+        <Link href={"/"} aria-label="home">
           <img
             src="logo 1.png"
             style={{ marginLeft: "2rem", color: "white", height: "4rem" }}
+            alt="logo"
           />
         </Link>
         <div className="ml-auto mr-8 hidden md:block" id="menu">
@@ -113,6 +114,7 @@ const Navbar = (props) => {
                   textDecoration: "none",
                   fontWeight: "bold",
                 }}
+                aria-label="proizvodi"
               >
                 Proizvodi
               </Link>
@@ -126,6 +128,7 @@ const Navbar = (props) => {
                   textDecoration: "none",
                   fontWeight: "bold",
                 }}
+                aria-label="blog"
               >
                 Blog
               </Link>
@@ -139,6 +142,7 @@ const Navbar = (props) => {
                   fontSize: "2rem",
                   textDecoration: "none",
                 }}
+                aria-label="kontakt"
               >
                 Kontakt
               </Link>
@@ -205,6 +209,7 @@ const Navbar = (props) => {
                     textDecoration: "none",
                     fontWeight: "bold",
                   }}
+                  aria-label="proizvodi"
                 >
                   Proizvodi
                 </Link>
@@ -221,6 +226,7 @@ const Navbar = (props) => {
                     textDecoration: "none",
                     fontWeight: "bold",
                   }}
+                  aria-label="blog"
                 >
                   Blog
                 </Link>
@@ -237,6 +243,7 @@ const Navbar = (props) => {
                     fontSize: "2rem",
                     textDecoration: "none",
                   }}
+                  aria-label="kontakt"
                 >
                   Kontakt
                 </Link>

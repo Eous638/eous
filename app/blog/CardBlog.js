@@ -66,6 +66,7 @@ export default function CardBlog(props) {
       <img
         src={`https://eous.pockethost.io/api/files/f00bupxnz6hpf9h/${props.id}/${props.img}?token=`}
         className="rounded-2xl h-24 md:h-52"
+        alt="blog"
       ></img>
       <div className="ml-6">
         <h1 className="text-white text-sm md:text-4xl pb-3 mt-8">

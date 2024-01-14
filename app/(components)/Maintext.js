@@ -47,7 +47,7 @@ export default function Maintext() {
         className="flex flex-col h-screen items-center justify-center"
         ref={vantaRef}
       >
-        <img src="logo 1.png" className=" h-56 md:h-72"></img>
+        <img src="logo 1.png" className=" h-56 md:h-72" alt="logo"></img>
         <h1 className="text-white text-center text-6xl md:text-9xl m-0 pb-1rem pt-1rem">
           EOUS
         </h1>

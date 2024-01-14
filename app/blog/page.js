@@ -43,7 +43,10 @@ const Blog = async () => {
           `http:eous.pockethost.io/api/files/f00bupxnz6hpf9h/${item.id}/${item.image}?token=`
         );
         return (
-          <Link href={`/blog/${item.id}`}>
+          <Link
+            href={`/blog/${item.id}`}
+            aria-label={`blog post ${items.name}`}
+          >
             <CardBlog
               title={item.title}
               text={item.description}
